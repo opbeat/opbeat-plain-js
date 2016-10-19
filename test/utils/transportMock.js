@@ -1,4 +1,4 @@
-var Subscription = require('../../src/common/subscription')
+var Subscription = require('opbeat-js-core').Subscription
 
 function TransportMock (transport) {
   this._transport = transport

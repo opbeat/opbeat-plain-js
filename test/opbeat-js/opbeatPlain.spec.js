@@ -1,6 +1,7 @@
 var Opbeat = require('../../src/opbeat-js/opbeatPlain')
-var ServiceFactory = require('../../src/common/serviceFactory')
-var Config = require('../../src/lib/config')
+var opbeatCore = require('opbeat-js-core')
+var ServiceFactory = opbeatCore.ServiceFactory
+
 var TransportMock = require('../utils/transportMock')
 
 describe('opbeat-js', function () {
@@ -12,9 +13,7 @@ describe('opbeat-js', function () {
   beforeEach(function () {
     originalOnError = window.onerror
     serviceFactory = new ServiceFactory()
-    config = Object.create(Config)
-    config.init()
-    serviceFactory.services['ConfigService'] = config
+    config = serviceFactory.getConfigService()
     serviceFactory.services['Logger'] = logger = Object.create(serviceFactory.getLogger())
     serviceFactory.services['Transport'] = new TransportMock()
     spyOn(logger, 'debug')
