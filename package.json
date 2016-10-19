@@ -30,8 +30,8 @@
     "error-stack-parser": "^1.3.5",
     "event-stream": "^3.3.1",
     "loglevel": "^1.4.0",
-    "sauce-connect-launcher": "^0.14.0",
     "opbeat-js-core": "git://github.com/opbeat/opbeat-js-core.git",
+    "sauce-connect-launcher": "^0.14.0",
     "simple-lru-cache": "0.0.2",
     "stack-generator": "^1.0.7",
     "zone.js": "git://github.com/jahtalab/zone.js.git#dist"
