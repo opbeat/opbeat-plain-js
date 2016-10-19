@@ -369,7 +369,7 @@ gulp.task('test:e2e:start-sauce', function (done) {
 })
 
 gulp.task('test:e2e', function (done) {
-  runSequence(['build', 'build:release', 'test:e2e:start-local'], ['test:e2e:protractor', 'test:e2e:phantomjs', 'test:e2e:launchsauceconnect'], 'test:e2e:sauceconnect', function (err) {
+  runSequence(['build', 'build:release', 'test:e2e:start-local'], ['test:e2e:phantomjs', 'test:e2e:launchsauceconnect'], 'test:e2e:sauceconnect', function (err) {
     if (err) {
       return taskFailed(err)
     } else {
