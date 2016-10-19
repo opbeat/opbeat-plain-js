@@ -1,10 +1,11 @@
-var logger = require('../lib/logger')
 var API = require('../lib/api')
 
 function Opbeat (serviceFactory) {
   this._serviceFactory = serviceFactory
 
   this._config = this._serviceFactory.getConfigService()
+
+  this._logger = this._serviceFactory.getLogger()
 
   var queuedCommands = []
   if (window._opbeat) {
@@ -49,17 +50,17 @@ Opbeat.prototype.config = function (properties) {
 
 Opbeat.prototype.install = function () {
   if (!this._config.isValid()) {
-    logger.warning('opbeat.install.config.invalid')
+    this._logger.warn('opbeat.install.config.invalid')
     return this
   }
 
   if (!this.isPlatformSupported()) {
-    logger.warning('opbeat.install.platform.unsupported')
+    this._logger.warn('opbeat.install.platform.unsupported')
     return this
   }
 
   if (this._config.get('isInstalled')) {
-    logger.warning('opbeat.install.already.installed')
+    this._logger.warn('opbeat.install.already.installed')
     return this
   }
 
@@ -92,12 +93,12 @@ Opbeat.prototype.uninstall = function () {
  */
 Opbeat.prototype.captureException = function (ex, options) {
   if (!this._config.get('isInstalled')) {
-    logger.error("Can't capture exception. Opbeat isn't intialized")
+    this._logger.error("Can't capture exception. Opbeat isn't intialized")
     return this
   }
 
   if (!(ex instanceof Error)) {
-    logger.error("Can't capture exception. Passed exception needs to be an instanceof Error")
+    this._logger.error("Can't capture exception. Passed exception needs to be an instanceof Error")
     return this
   }
 

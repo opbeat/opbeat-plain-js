@@ -1,4 +1,4 @@
-var utils = require('./utils')
+var utils = require('opbeat-js-core').utils
 
 function api (opbeat, queuedCommands) {
   this.q = []
