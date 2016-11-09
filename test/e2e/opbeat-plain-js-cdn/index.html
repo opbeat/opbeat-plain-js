@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>opbeat-js</title>
+</head>
+
+<body>
+
+  <script src="https://d3tvtfb6518e3e.cloudfront.net/3/opbeat.min.js" data-org-id="7f9fa667d0a349dd8377bc740bcfc33e" data-app-id="6664ca4dfc"
+    data-debug="true" async></script>
+  </script>
+
+  <script type="text/javascript"> 
+    _opbeat = window._opbeat || function() { 
+    (window._opbeat.q = window._opbeat.q || []).push(arguments) 
+    }; 
+
+    _opbeat('setUserContext', { 
+      username: "hamid", 
+      email: "hamid@opbeat.com", 
+      id: "1" 
+      });
+  </script>
+
+  <script>
+  setTimeout(function(){
+    throw new Error('Test error')
+  },1000)
+  </script>
+</body>
+
+</html>
