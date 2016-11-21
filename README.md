@@ -7,15 +7,17 @@
 
 This is the official frontend JavaScript module for [Opbeat](https://opbeat.com). 
 
-It enables error logging for frontend applications.
+It enables error logging for plain (non-framework) frontend applications.
+
+If you are looking for a module for your AngularJS applications, please see [Opbeat for AngularJS](https://github.com/opbeat/opbeat-angular) on GitHub.
 
 If you are looking for a module for your Node.js applications, please see [Opbeat for Node.js](https://github.com/opbeat/opbeat-node) on GitHub.
 
 ## Documentation
 
-- [Documentation overview](https://opbeat.com/docs/topics/javascript/)
 - [Get started with Opbeat for JavaScript](https://opbeat.com/docs/articles/get-started-with-javascript/) 
 - [Module API](https://opbeat.com/docs/articles/opbeat-for-javascript-api/)
+- [Other JavaScript articles](https://opbeat.com/docs/topics/javascript/)
 
 
 ## Development
