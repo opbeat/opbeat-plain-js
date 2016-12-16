@@ -5,6 +5,8 @@
 <a href="https://opbeat.com" title="Opbeat"><img src="http://opbeat-brand-assets.s3-website-us-east-1.amazonaws.com/svg/logo/logo.svg" align="right" height="25px"></a>
 
 
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/opbeat-plain-js.svg)](https://saucelabs.com/u/opbeat-plain-js)
+
 This is the official frontend JavaScript module for [Opbeat](https://opbeat.com). 
 
 It enables error logging for plain (non-framework) frontend applications.
