@@ -5,8 +5,8 @@ node_js:
 
 env:
   global:
-    - SAUCE_USERNAME=opbeat
-    - SAUCE_ACCESS_KEY=de42e589-1450-41a2-8a44-90aa00c15168
+    - SAUCE_USERNAME=opbeat-plain-js
+    - SAUCE_ACCESS_KEY=8aebae95-a0be-488b-899c-0c7f09055f26
   matrix:
     # Order: a slower build first, so that we don't occupy an idle travis worker waiting for others to complete.
     - MODE=saucelabs
